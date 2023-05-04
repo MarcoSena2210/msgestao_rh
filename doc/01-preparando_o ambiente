@@ -1,0 +1,146 @@
+# Preparando o ambiente
+
+### Criar uma pasta
+````
+mkdir msgestao_rh
+````
+
+### Veriricar qual a versão do python está instalada
+````
+python --version
+````
+
+Output
+````
+Python 3.9.0
+````
+
+### Instalar o ambiente virtual
+Ir para dentro pasta criada e criar o ambiente virtual
+
+````
+cd msgestao_rh
+python -m venv venv
+````
+
+### Ativar o ambiente virtual
+
+````
+.\venv\Scripts\activate
+````
+
+
+### Instalar o django
+
+````
+pip install django
+````
+
+### Abrir o pycharm e verificar se o o interpreter está ativado
+````
+file ->settings ->project ms_gestaorh ->Interprete
+    se aparecer o python no campo Python Interpret ()sucesso)
+    Se não, Clique em add e busc=qua a intalação do pyhton
+````
+
+### Criando o projeto
+#### Abrir o termnal, verificar que o ambienter vitual precisar estar ativado
+ (venv) C:\dev\msgestao_rh>django-admin startproject msgestao_rh .
+````
+django-admin startproject msgestao_rh .
+````
+### Criar um superuser
+
+(venv) C:\dev\msgestao_rh>
+````
+python manage.py createsuperuser
+````
+
+#### Output
+````
+Username (leave blank to use 'suporte'): msena2210
+Email address:
+Password:
+Password (again):
+The password is too similar to the username.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+(venv) C:\dev\msgestao_rh>
+````
+
+
+## Migrações
+
+### Usando o migrate
+
+Dica: O Django já vem com um conjunto de tabelas de controle de usuarios e autenticações para facilitar essa necessidade.
+Traz também um banco local chamado Sqlite3.
+
+Ao usar o comando migrate ele irá criar todas as tabelas padrão que já vem pre-estabelidas no django.
+
+(venv) D:\dev\msgestaorh>
+
+````
+    python manage.py migrate
+````
+
+### output
+
+````
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts...
+OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions...
+OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(venv) D:\dev\msgestaorh>
+````
+
+## Introdução ao Django Admin
+
+O Django-admin é uma ferramenta muito poderosa,
+e iremos utilizá-la para fazer executar algumas tarefas administrativas,
+como concessão de privilégios a usuários,
+criar o usuário administrador, entre outras tarefas.
+Além disso, iremos fazer cadastro, alteração, remoção e edição dos Posts de nosso blog.
+Para mais detalhes, acesse a (documentação oficial.)
+[https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#modeladmin-objects]
+
+Crie o superusuário conforme indicado abaixo
+Abra o terminal e crie o superusuário do projeto.
+
+```
+    python manage.py createsuperuser
+```
+
+Informe os dados requeridos.No meua caso usei
+user: msena2210
+pass; msena2210
+
+Rode o servidor.
+
+```*
+    python manage.py runserver
+```
+
+Abra o browser na URL <http://127.0.0.1/admin>
+
+```
