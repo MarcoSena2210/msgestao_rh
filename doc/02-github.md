@@ -40,7 +40,11 @@ git add .
 git commit -m "First commit"
 ````
 
+<<<<<<< HEAD
 ### Entrar no github e criar o repositório remoto
+=======
+### Entrar no repositório do github e criar o repositrio remoto
+>>>>>>> 804d63794167a5cb7f3a0b731af2eb9275d27607
 
 Depois de criado, executar o comandos abaixo
 ````
@@ -48,6 +52,7 @@ Depois de criado, executar o comandos abaixo
  git push -u origin master
 ````
 
+<<<<<<< HEAD
 ### Fazendo o 2º backup no git
 #### Usamos o git status para verificar o que foi mudado
 ````
@@ -93,3 +98,5 @@ msena@DESKTOP-NU65P6S MINGW64 /d/DevDjango/msgestao_rh (master)
 ````
 
 
+=======
+>>>>>>> 804d63794167a5cb7f3a0b731af2eb9275d27607

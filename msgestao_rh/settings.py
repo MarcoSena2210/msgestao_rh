@@ -29,12 +29,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.empresas',
 
+<<<<<<< HEAD
 ]
 
 # Apps da aplicação
 INSTALLED_APPS += [
      'apps.funcionarios',
+=======
+>>>>>>> 804d63794167a5cb7f3a0b731af2eb9275d27607
 ]
+
+# Apps da aplicação
+# INSTALLED_APPS += [
+#    'apps.empresas,EmpresasConfig',
+#]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
