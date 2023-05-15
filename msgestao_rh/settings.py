@@ -27,16 +27,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.empresas',
-
-<<<<<<< HEAD
-]
+ ]
 
 # Apps da aplicação
 INSTALLED_APPS += [
-     'apps.funcionarios',
-=======
->>>>>>> 804d63794167a5cb7f3a0b731af2eb9275d27607
+    'apps.empresas',
+    'apps.funcionarios',
+    'apps.departamentos',
+    '',
 ]
 
 # Apps da aplicação
@@ -59,7 +57,7 @@ ROOT_URLCONF = 'msgestao_rh.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
