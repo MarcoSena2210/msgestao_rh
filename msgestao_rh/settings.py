@@ -19,7 +19,6 @@ ALLOWED_HOSTS = []
 sys.path.append(os.path.join(BASE_DIR, "apps"))
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,21 +26,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.departamentos',
+    'empresas.apps.EmpresasConfig',
+    'funcionarios',
+    #'documentos',
+    'registro_hora_extra',
  ]
 
-# Apps da aplicação
-INSTALLED_APPS += [
-    'apps.empresas',
-    'apps.funcionarios',
-    'apps.departamentos',
-    'apps.documentos',
-    'apps.registro_hora_extra',
-]
 
-# Apps da aplicação
-# INSTALLED_APPS += [
-#    'apps.empresas,EmpresasConfig',
-#]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
