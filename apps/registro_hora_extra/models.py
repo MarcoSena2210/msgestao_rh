@@ -7,7 +7,7 @@ class RegistroHoraExtra(models.Model):
     data_criacao = models.DateTimeField(default=timezone.now)
 
     # Hora extra pertence a um funcionário
-    # funcionario = models.ForeignKey(Funcionario, on_delete=models.PROTECT)
+    funcionario = models.ForeignKey(Funcionario, on_delete=models.PROTECT)
 
     def __str__(self):
         return self.motivo
