@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'apps.departamentos',
     'empresas.apps.EmpresasConfig',
     'funcionarios',
-    #'documentos',
+    'apps.documentos',
     'registro_hora_extra',
  ]
 
