@@ -144,3 +144,19 @@ Rode o servidor.
 Abra o browser na URL <http://127.0.0.1/admin>
 
 ```
+
+### Gerar o requirements.txt, este arquivo tem o ojetivo de armazenar o nome das dependência de
+packages instalados em nosso sistema
+
+````
+    pip freeze > requirements.txt
+````
+Pronto, agora seu arquivo requirements.txt conterá somente as dependências necessárias para rodar o seu projeto.
+
+
+### Instalando pacotes requirements.txt
+Quando for necessário instalar os pacotes registrados no requirements.txt você pode digitar o seguinte comando no terminal.
+````
+pip install -r requirements.txt
+
+````
