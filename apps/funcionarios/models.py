@@ -6,14 +6,13 @@ from apps.empresas.models import Empresa
 
 class Funcionario(models.Model):
     nome = models.CharField(max_length=100, verbose_name="Nome completo")
-
     user = models.OneToOneField(User, on_delete=models.PROTECT)
-
     # Pode ser criado uma lista de depatamentos
     departamentos = models.ManyToManyField(Departamento)
 
     # Um funcionário só pode pertencer a uma empresa
-    empresa = models.ForeignKey(Empresa, on_delete=models.PROTECT)
+    empresa = models.ForeignKey(
+        Empresa, on_delete=models.PROTECT, null=True, blank=True)
 
     data_criacao = models.DateTimeField(default=timezone.now)
     cpf = models.CharField(verbose_name="CPF",max_length=11)
